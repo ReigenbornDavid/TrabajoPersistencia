@@ -2,17 +2,12 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
 <hibernate-mapping>
-    <class name="com.facultad.trabajopersistencia.Alumno" table="alumno">
-        <id name="alumnoId" column="alumnoId">
-            <generator class="identity" />
-        </id>
+    <subclass name="com.facultad.trabajopersistencia.Alumno" discriminator-value="alm" extends="com.facultad.trabajopersistencia.Persona">
+
         <property name="numeroLegajo" column="numeroLegajo" />
         <property name="añoIngreso" column="añoIngreso" />
-
-        <many-to-one name="ciudad" column="ciudadId" class="com.facultad.trabajopersistencia.Ciudad" />
-        
-        
-    </class>
+    </subclass>
 </hibernate-mapping>
 

@@ -4,13 +4,13 @@
       "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.facultad.trabajopersistencia.Facultad" table="facultad">
+    <class name="com.facultad.trabajopersistencia.models.Facultad" table="facultad">
         <id name="facultadId" column="facultadId" type="int">
             <generator class="identity"/>
         </id>
 
         <property name="nombre" column="nombre" type="string"/>
         
-        <many-to-one name="ciudad" column="ciudadId" class="com.facultad.trabajopersistencia.Ciudad" />
+        <many-to-one name="ciudad" column="ciudadId" class="com.facultad.trabajopersistencia.models.Ciudad" />
     </class>
 </hibernate-mapping>

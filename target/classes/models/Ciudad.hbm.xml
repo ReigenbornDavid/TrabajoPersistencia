@@ -4,7 +4,7 @@
       "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.facultad.trabajopersistencia.Ciudad" table="ciudad">
+    <class name="com.facultad.trabajopersistencia.models.Ciudad" table="ciudad">
         <id name="ciudadId" column="ciudadId" type="int">
             <generator class="identity"/>
         </id>

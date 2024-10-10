@@ -11,13 +11,12 @@
         <property name="hibernate.connection.password">toor</property>
         <property name="hibernate.connection.pool_size">3</property>
         <property name="hibernate.current_session_context_class">thread</property>
-        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.show_sql">false</property>
         <property name="hibernate.format_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         
         <mapping resource="models/Ciudad.hbm.xml"/>
         <mapping resource="models/Facultad.hbm.xml"/>
-        <mapping resource="models/Alumno.hbm.xml"/>
         <mapping resource="models/Persona.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

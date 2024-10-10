@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.facultad.trabajopersistencia;
+package com.facultad.trabajopersistencia.models;
 
+import com.facultad.trabajopersistencia.models.Profesor;
+import com.facultad.trabajopersistencia.models.Alumno;
 import java.util.List;
 
 /**

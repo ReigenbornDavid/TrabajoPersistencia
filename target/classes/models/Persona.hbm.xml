@@ -4,17 +4,29 @@
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.facultad.trabajopersistencia.Persona" table="persona">
+    <class name="com.facultad.trabajopersistencia.models.Persona" table="persona">
         <id name="personaId" column="personaId">
             <generator class="identity" />
         </id>
+
         <property name="apellido" column="apellido" />
         <property name="nombre" column="nombre" />
         <property name="dni" column="dni" />
         <property name="fechaNacimiento" column="fechaNacimiento" />
 
-        <many-to-one name="ciudad" column="ciudadId" class="com.facultad.trabajopersistencia.Ciudad" />
+        <many-to-one name="ciudad" column="ciudadId" class="com.facultad.trabajopersistencia.models.Ciudad" />
+
+        <joined-subclass name="com.facultad.trabajopersistencia.models.Alumno" table="alumno">  
+            <key column="personaId"></key>  
+
+            <property name="numeroLegajo" column="numeroLegajo" />
+            <property name="añoIngreso" column="añoIngreso" />
+        </joined-subclass>  
+        
+        <joined-subclass name="com.facultad.trabajopersistencia.models.Profesor" table="profesor">  
+            <key column="personaId"></key>  
+
+            <property name="antiguedad" column="antiguedad" />
+        </joined-subclass>  
     </class>
 </hibernate-mapping>
-
-
