@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.facultad.trabajopersistencia.Persona" table="persona">
+        <id name="personaId" column="personaId">
+            <generator class="identity" />
+        </id>
+        <property name="apellido" column="apellido" />
+        <property name="nombre" column="nombre" />
+        <property name="dni" column="dni" />
+        <property name="fechaNacimiento" column="fechaNacimiento" />
+
+        <many-to-one name="ciudad" column="ciudadId" class="com.facultad.trabajopersistencia.Ciudad" />
+    </class>
+</hibernate-mapping>
+
+

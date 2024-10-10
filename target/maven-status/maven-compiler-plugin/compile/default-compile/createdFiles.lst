@@ -1,0 +1,9 @@
+com\facultad\trabajopersistencia\utils\HibernateUtil.class
+com\facultad\trabajopersistencia\Materia.class
+com\facultad\trabajopersistencia\Carrera.class
+com\facultad\trabajopersistencia\Alumno.class
+com\facultad\trabajopersistencia\TrabajoPersistencia.class
+com\facultad\trabajopersistencia\Ciudad.class
+com\facultad\trabajopersistencia\Persona.class
+com\facultad\trabajopersistencia\Profesor.class
+com\facultad\trabajopersistencia\Facultad.class
