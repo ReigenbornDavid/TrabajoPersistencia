@@ -46,5 +46,6 @@ public class EjemploCiudad {
         for (Ciudad c : ciudades) {
             System.out.println(c.toString());
         }
+        System.out.println("-----");
     }
 }

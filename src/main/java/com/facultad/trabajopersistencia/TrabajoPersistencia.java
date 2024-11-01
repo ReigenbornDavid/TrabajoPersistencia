@@ -5,7 +5,13 @@
 package com.facultad.trabajopersistencia;
 
 import com.facultad.trabajopersistencia.DAO.CiudadDao;
+import com.facultad.trabajopersistencia.ejemplos.EjemploAlumno;
+import com.facultad.trabajopersistencia.ejemplos.EjemploCarrera;
 import com.facultad.trabajopersistencia.ejemplos.EjemploCiudad;
+import com.facultad.trabajopersistencia.ejemplos.EjemploConsultasHQL;
+import com.facultad.trabajopersistencia.ejemplos.EjemploFacultad;
+import com.facultad.trabajopersistencia.ejemplos.EjemploMateria;
+import com.facultad.trabajopersistencia.ejemplos.EjemploProfesor;
 import com.facultad.trabajopersistencia.models.Ciudad;
 import java.util.List;
 
@@ -19,6 +25,12 @@ public class TrabajoPersistencia {
         System.out.println("Trabajo Persistencia");
         
         EjemploCiudad.Ejemplo();
+        EjemploProfesor.Ejemplo();
+        EjemploAlumno.Ejemplo();
+        EjemploMateria.Ejemplo();
+        EjemploFacultad.Ejemplo();
+        EjemploCarrera.Ejemplo();
+        EjemploConsultasHQL.Ejemplo();
         
         System.exit(0);
     }

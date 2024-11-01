@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.facultad.trabajopersistencia.models.Materia" table="materia">
+        <id name="materiaId" column="materiaId" type="int">
+            <generator class="identity"/>
+        </id>
+
+        <property name="nombre" column="nombre" type="string"/>
+        <property name="nivel" column="nivel" type="int"/>
+        
+        <many-to-one name="profesor" column="profesorId" class="com.facultad.trabajopersistencia.models.Profesor" />
+
+        <bag name="alumnos" table="alumnoMateria" cascade="all" lazy="false">
+            <key column="materiaId"/>
+            <many-to-many class="com.facultad.trabajopersistencia.models.Alumno" column="alumnoId"/>
+        </bag>
+    </class>
+</hibernate-mapping>

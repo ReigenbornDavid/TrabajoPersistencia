@@ -5,19 +5,22 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/trabajopersistencia</property>
+        <property name="hibernate.connection.url">jdbc:mysql://192.168.0.243:3306/trabajopersistencia?createDatabaseIfNotExist=true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">toor</property>
         <property name="hibernate.connection.pool_size">3</property>
         <property name="hibernate.current_session_context_class">thread</property>
-        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.bytecode.provider">bytebuddy</property>
         
         <mapping resource="models/Ciudad.hbm.xml"/>
         <mapping resource="models/Facultad.hbm.xml"/>
         <mapping resource="models/Persona.hbm.xml"/>
+        <mapping resource="models/Materia.hbm.xml"/>
+        <mapping resource="models/Carrera.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
 
